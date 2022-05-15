@@ -5,5 +5,5 @@ from django_backend.projeto.models import pessoa
 class PessoaForm(forms.ModelForm):
     class Meta:
         model = pessoa
-        fields = '__all___'
+        fields = '__all__'
         
