@@ -20,6 +20,9 @@ class conta(models.Model):
     agencia = models.IntegerField()
     operacao = models.IntegerField()
 
+    def __str__(self):
+        return self.conta    
+
 class endereco(models.Model):
     id_endereco = models.IntegerField()
     id_cidade = models.IntegerField()
@@ -29,6 +32,9 @@ class endereco(models.Model):
     bairro = models.CharField(max_length=80)
     complemento = models.CharField(max_length=60)
     #observacoes = clob
+
+    def __str__(self):
+        return self.logradouro    
 
 class pessoa(models.Model):
     id_pessoa = models.IntegerField()
@@ -42,7 +48,7 @@ class pessoa(models.Model):
     id_conta = models.IntegerField()
     
     def __str__(self):
-        return self.email
+        return self.nome
 
 class cidade(models.Model):
     id_cidade = models.IntegerField()
@@ -60,9 +66,12 @@ class ocorrencia(models.Model):
     id_pessoa = models.IntegerField()
 
     def __str__(self):
-        return self.realizada
+        return self.data
 
 class uf(models.Model):
     id_uf = models.IntegerField()
     nome_uf = models.CharField(max_length=30)
     sigla_uf = models.CharField(max_length=2)
+
+    def __str__(self):
+        return self.nome_uf

@@ -22,7 +22,7 @@ def pessoa_modelform(request):
     else:
         form = PessoaFormulario(request.POST)
         if form.is_valid():
-            pessoa = form.save
+            pessoa = form.save()
             form = PessoaFormulario()
 
         context = {
@@ -41,7 +41,7 @@ def cidade_modelform(request):
     else:
         form = CidadeFormulario(request.POST)
         if form.is_valid():
-            cidade = form.save
+            cidade = form.save()
             form = CidadeFormulario()
 
         context = {
@@ -60,7 +60,7 @@ def user_modelform(request):
     else:
         form = UserFormulario(request.POST)
         if form.is_valid():
-            user = form.save
+            user = form.save()
             form = UserFormulario()
 
         context = {
@@ -79,7 +79,7 @@ def conta_modelform(request):
     else:
         form = ContaFormulario(request.POST)
         if form.is_valid():
-            user = form.save
+            conta = form.save()
             form = ContaFormulario()
 
         context = {
@@ -98,7 +98,7 @@ def endereco_modelform(request):
     else:
         form = EnderecoFormulario(request.POST)
         if form.is_valid():
-            user = form.save
+            endereco = form.save()
             form = EnderecoFormulario()
 
         context = {
@@ -117,7 +117,7 @@ def ocorrencia_modelform(request):
     else:
         form = OcorrenciaFormulario(request.POST)
         if form.is_valid():
-            user = form.save
+            ocorrencia = form.save()
             form = OcorrenciaFormulario()
 
         context = {
@@ -136,7 +136,7 @@ def uf_modelform(request):
     else:
         form = UfFormulario(request.POST)
         if form.is_valid():
-            user = form.save
+            user = form.save()
             form = UfFormulario()
 
         context = {
