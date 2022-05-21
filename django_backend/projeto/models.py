@@ -9,7 +9,7 @@ class user(models.Model):
     last_name = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.username
+        return str(self.username)
 
 class conta(models.Model):
     id_conta = models.IntegerField()
@@ -21,7 +21,7 @@ class conta(models.Model):
     operacao = models.IntegerField()
 
     def __str__(self):
-        return self.conta
+        return str(self.conta)
 
 class uf(models.Model):
     id_uf = models.IntegerField()
@@ -29,7 +29,7 @@ class uf(models.Model):
     sigla_uf = models.CharField(max_length=2)
 
     def __str__(self):
-        return self.nome_uf    
+        return str(self.nome_uf)    
 
 class cidade(models.Model):
     id_cidade = models.IntegerField()
@@ -37,7 +37,7 @@ class cidade(models.Model):
     id_uf = models.ForeignKey(uf, on_delete=models.PROTECT)
 
     def __str__(self):
-        return self.nome_cidade
+        return str(self.nome_cidade)
 
 class endereco(models.Model):
     id_endereco = models.IntegerField()
@@ -50,7 +50,7 @@ class endereco(models.Model):
     observacoes = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        return self.logradouro    
+        return str(self.logradouro)    
 
 class pessoa(models.Model):
     id_pessoa = models.IntegerField()
@@ -64,7 +64,7 @@ class pessoa(models.Model):
     id_conta = models.ForeignKey(conta, on_delete=models.PROTECT)
     
     def __str__(self):
-        return self.nome
+        return str(self.nome)
 
 class ocorrencia(models.Model):
     id_ocorrencia = models.IntegerField()
@@ -74,4 +74,4 @@ class ocorrencia(models.Model):
     id_pessoa = models.ForeignKey(pessoa, on_delete=models.PROTECT)
 
     def __str__(self):
-        return self.data
+        return str(self.data)

@@ -1,4 +1,7 @@
+from msilib.schema import Class
+from pipes import Template
 from django.shortcuts import render
+
 from projeto.forms import UfFormulario
 from projeto.forms import EnderecoFormulario
 from projeto.forms import ContaFormulario
@@ -6,8 +9,6 @@ from projeto.forms import CidadeFormulario
 from projeto.forms import PessoaFormulario
 from projeto.forms import UserFormulario
 from projeto.forms import OcorrenciaFormulario
-
-from projeto.models import pessoa, cidade, user, conta, endereco, ocorrencia, uf
 
 # Create your views here.
 
@@ -143,3 +144,6 @@ def uf_modelform(request):
             'form': form
         }
         return render(request, "formularios/uf_modelform.html", context=context)
+
+def menu(request):
+    return render(request, "menu_principal/menu.html")
