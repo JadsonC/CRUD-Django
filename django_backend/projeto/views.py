@@ -1,5 +1,4 @@
 from msilib.schema import Class
-from pipes import Template
 from django.shortcuts import render
 
 from projeto.forms import UfFormulario
