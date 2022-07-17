@@ -1,4 +1,4 @@
-# CRUD-Django utilizando o SGBD PostgreSQL
+# CRUD-Django-Angular utilizando o SGBD PostgreSQL
 
 json criado: datadump.json
 
