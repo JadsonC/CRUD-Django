@@ -4,12 +4,12 @@ from cpf_field.models import CPFField
 
 class user(models.Model):
     id_user = models.IntegerField()
-    username = models.CharField(max_length=30)
+    user_name = models.CharField(max_length=30)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
 
     def __str__(self):
-        return str(self.username)
+        return str(self.user_name)    
 
 class conta(models.Model):
     id_conta = models.IntegerField()

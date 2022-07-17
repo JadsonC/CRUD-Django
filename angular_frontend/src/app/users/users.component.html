@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Cadastro de Usuário</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      </div>
+    </div>
+  </nav>
+  
+  <div>
+    <br>
+  </div>
+  
+  <form>
+    <div class="row">
+      <div class="col">
+        <input type="number" class="form-control" placeholder="Id user" name= "id_user" [(ngModel)]="user.id_user">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="User name" name= "user_name" [(ngModel)]="user.user_name">
+      </div>
+    </div>
+  
+    <br>
+  
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="First name" name= "first_name" [(ngModel)]="user.first_name">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Last name" name= "last_name" [(ngModel)]="user.last_name">
+      </div>
+    </div>
+
+    <br>
+  
+    <button type="button" class="btn btn-primary mb-2" (click)="cadastrar()">Cadastrar</button> 
+  </form>
+  

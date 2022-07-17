@@ -1,4 +1,3 @@
-from django import views
 from django.contrib import admin
 from django.urls import path, include
 
@@ -19,5 +18,6 @@ route.register(r'cidades', projetoviewsets.cidadeViewSet, basename="Cidades")
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('menu/', include('projeto.urls')),
+    path('api-auth/', include('rest_framework.urls')),     
     path('', include(route.urls)),
 ]
