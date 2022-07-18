@@ -11,7 +11,7 @@ import { UsersService } from './service/users.service';
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
   ],
   imports: [
     BrowserModule,

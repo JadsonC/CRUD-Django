@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { UsersService } from '../service/users.service';
 import { UserModel } from '../models/user.model';
-
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { NgForOf } from '@angular/common';
+import { FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-users',
@@ -10,11 +10,10 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-
   user = {} as UserModel;
 
   constructor(private usersService: UsersService) { }
-
+  
   ngOnInit(): void {
 
   }
@@ -29,4 +28,5 @@ export class UsersComponent implements OnInit {
       console.log(error);
     });
   }
+
 }

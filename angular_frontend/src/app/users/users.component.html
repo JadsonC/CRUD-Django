@@ -35,7 +35,13 @@
     </div>
 
     <br>
-  
-    <button type="button" class="btn btn-primary mb-2" (click)="cadastrar()">Cadastrar</button> 
+
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-primary mb-2" (click)="cadastrar()">Cadastrar</button>
+        <br>
+        <button type="reset" class="btn btn-primary mb-2" ng-click="reset()">Limpar Campos</button>
+      </div>
+    </div>
   </form>
   
